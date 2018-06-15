@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+			table {
+			    font-family: arial, sans-serif;
+			    border-collapse: collapse;
+			    width: 100%;
+			}
+
+			td, th {
+			    border: 1px solid #dddddd;
+			    text-align: left;
+			    padding: 8px;
+			}
+
+			tr:nth-child(even) {
+			    background-color: #dddddd;
+			}
+		</style>
+	</head>
+	<body>
+
+		<h2>Student Table</h2>
+
+		<table>
+			<tr>
+				<th>Name</th>
+			</tr>
+			<% if (student.length) { %>
+				<% student.forEach(function(name) { %>	
+					<tr>
+						<td><%= name %></td>
+					</tr>	
+				<% }) %>
+			<% } %>		
+		</table>
+	</body>
+</html>

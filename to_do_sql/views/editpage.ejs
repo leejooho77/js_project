@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>A mysql todo list app in Express/Node</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <h1>Edit Your ToDo List...</h1>
+            </div>
+            <div class='col-sm-12'>
+                 <table class="table">
+                    <tr>
+                        <th>Current Task Name</th>
+                        <th>Current Task Due Date</th>
+                        <th>Form</th>
+                    </tr>
+                    <tr>
+                        <td><%= taskArray[0].name %></td>
+                        <td><%= taskArray[0].date %></td>
+                        <td>
+                            <form class="form-inline" action="/editItem/<%=id%>" method="post">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Task Name" name="changedTask" />
+                                    </div>
+                                    <div class="input-group">
+                                        <input type="date" class="form-control" name="changedDate" />
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Edits Task</button>
+                            </form>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "node101",
+  "version": "1.0.0",
+  "description": "First nodejs project",
+  "main": "node.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "javascript"
+  ],
+  "author": "Juho Lee",
+  "license": "ISC",
+  "dependencies": {
+    "p2": "^0.7.1",
+    "request": "^2.85.0"
+  }
+}
